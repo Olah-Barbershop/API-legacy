@@ -1,4 +1,4 @@
-# The REST API used for the [Oláh Barbershop app](https://github.com/Olah-Barbershop/app)
+# The REST API used for the Oláh Barbershop [app](https://github.com/Olah-Barbershop/app) and [website](https://github.com/Olah-Barbershop/website)
 
 ## Made using [ExpressJS](https://expressjs.com/) and [MongoDB](https://www.mongodb.com/)
 
