@@ -1,0 +1,39 @@
+# API Documentation
+
+## Important information
+I'm not sure if I'll be able to renew the API server, but it's guaranteed to be available *until* **December 25, 2024**
+
+## Domain
+- olahbarbershop.codes
+
+## Endpoints
+- /prices - Prices for our services
+  - https://olahbarbershop.codes/prices
+  - ```json
+    {
+      "name": "The service name (String)",
+      "amount": "The price (Number)"
+    }
+    ```
+- /locations - Our locations
+  - https://olahbarbershop.codes/locations
+  - ```json
+    {
+      "address": "The location's address (String)",
+      "phoneNumber": "The location's telephone number (String)",
+      "email": "Our email address (String)",
+      "mondayToThursday": "Our business hours from Monday to Thursday in 24-hour time format (String)",
+      "friday": "Our business hours on Friday in 24-hour time format (String)",
+      "saturdayToSunday": "Our business hours from Saturday to Sunday in 24-hour time format (String)"
+    }
+    ```
+- /notifications - App notifications about news and merch
+  - https://olahbarbershop.codes/notifications
+  - ```json
+    {
+      "_id": "The notification ID (ObjectID)",
+      "type": "The notification type, either 'news' or 'merch' (String)",
+      "date": "The date of when the notification was created in YYYY-MM-DD format (String)",
+      "description": "The notification body itself (String)"
+    }
+    ```
