@@ -4,6 +4,9 @@
 
 (Side note: **All** info given by the API other than merch is **fake**.)
 
+## Documentation
+Check out the API documentation [here](DOCUMENTATION.md)
+
 ## Instructions
 First, clone the repository
 ```sh
