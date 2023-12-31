@@ -14,10 +14,14 @@ git clone https://github.com/olah-barbershop/api.git
 cd api
 ```
 Next, create a `.env` file and add your MongoDB database url like this
-```sh
-DATABASE_URL = #your database url
+```env
+DATABASE_URL=[your database url]
 ```
-Generate a self-signed SSL certificate
+Create a `server.cert` file and add your SSL server certificate, while adding your private key to `server.key`
+
+**OR**
+
+Generate a self-signed SSL certificate (for testing purposes only)
 ```sh
 openssl req -nodes -new -x509 -keyout server.key -out server.cert
 ```
