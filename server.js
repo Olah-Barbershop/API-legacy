@@ -1,6 +1,6 @@
 const express = require('express');
 const locationsRoute = require('./routes/locations.route');
-const pricesRoute = require('./routes/prices.route');
+const servicesRoute = require('./routes/services.route');
 const notificationsRoute = require('./routes/notifications.route');
 const mongoose = require('mongoose');
 const https = require('https');
@@ -11,7 +11,7 @@ const fs = require('fs');
 const app = express();
 
 app.use('/locations', locationsRoute);
-app.use('/prices', pricesRoute);
+app.use('/services', servicesRoute);
 app.use('/notifications', notificationsRoute);
 
 app.use((req, res, next) => {

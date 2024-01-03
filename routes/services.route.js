@@ -1,13 +1,13 @@
 const express = require('express');
-const Prices = require('../models/prices.model');
+const Services = require('../models/services.model');
 const router = express.Router();
 const createError = require('http-errors');
 const headers = require('./headers')
 
 router.get('/', async (req, res, next) => {
     try {
-        const results = await Prices.find({}, {_id: 0});
-        if (results == "") throw createError(404, 'Az árak nem elérhetőek.');
+        const results = await Services.find({}, {_id: 0});
+        if (results == "") throw createError(404, 'No available services.');
         res.set(headers);
         res.send(results);
     } catch (error) {

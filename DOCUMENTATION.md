@@ -7,11 +7,12 @@ I'm not sure if I'll be able to renew the API server, but it's guaranteed to be 
 - olahbarbershop.codes
 
 ## Endpoints
-- /prices - Prices for our services
-  - https://olahbarbershop.codes/prices
+- /services - Our services
+  - https://olahbarbershop.codes/services
   - ```json
     {
       "name": "The service name (String)",
+      "description": "Description of the service (String)",
       "amount": "The price (Number)"
     }
     ```

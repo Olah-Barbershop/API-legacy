@@ -7,7 +7,7 @@ const headers = require('./headers')
 router.get('/', async (req, res, next) => {
     try {
         const results = await Locations.find({}, {_id: 0});
-        if (results == "") throw createError(404, 'Az üzletek nem elérhetőek.');
+        if (results == "") throw createError(404, 'No available locations.');
         res.set(headers);
         res.send(results)
     } catch (err) {

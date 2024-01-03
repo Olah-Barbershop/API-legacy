@@ -7,7 +7,7 @@ const headers = require('./headers')
 router.get('/', async (req, res, next) => {
     try {
         const results = await Notifications.find({}, {__v: 0});
-        if (results == "") throw createError(404, 'Az értesítések nem elérhetőek.');
+        if (results == "") throw createError(404, 'No available notifications.');
         res.set(headers);
         res.send(results)
     } catch (err) {
