@@ -1,8 +1,8 @@
 # The REST API used for the Oláh Barbershop [app](https://github.com/Olah-Barbershop/app) and [website](https://github.com/Olah-Barbershop/website)
 
-#### Made using [ExpressJS](https://expressjs.com/) and [MongoDB](https://www.mongodb.com/)
-
-(Side note: **All** data given by the API other than merch is **fake**.)
+[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
+[![GitHub package.json dependency version (subfolder of monorepo)](https://img.shields.io/github/package-json/dependency-version/Olah-Barbershop/API/express)](https://www.npmjs.com/package/express)
+[![GitHub package.json dependency version (subfolder of monorepo)](https://img.shields.io/github/package-json/dependency-version/Olah-Barbershop/API/mongoose)](https://www.npmjs.com/package/mongoose)
 
 ## Documentation
 Check out the API documentation [here](DOCUMENTATION.md)
