@@ -44,8 +44,8 @@ mongoose.connect(process.env.DATABASE_URL, { useNewUrlParser: true, useUnifiedTo
       },
       app
     )
-    .listen(3000, () => {
-        console.log('Server is running on port 3000');
+    .listen(443, () => {
+        console.log('Server is running on port 443');
     });
 }).catch((err) => {
     console.log(err.message);
