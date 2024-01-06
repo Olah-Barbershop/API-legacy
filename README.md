@@ -1,6 +1,7 @@
 # The REST API used for the Oláh Barbershop [app](https://github.com/Olah-Barbershop/app) and [website](https://github.com/Olah-Barbershop/website)
 
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0) &nbsp;
+[![GitHub Release](https://img.shields.io/github/v/release/Olah-Barbershop/API)](https://github.com/Olah-Barbershop/API/releases/latest)
 
 ## Documentation
 Check out the API documentation [here](DOCUMENTATION.md)
