@@ -16,14 +16,8 @@ Next, create a `.env` file and add your MongoDB database url like this
 ```env
 DATABASE_URL=[your database url]
 ```
-Create a `server.cert` file and add your SSL server certificate, while adding your private key to `server.key`
+Now, you're going to need an SSL certificate. It can be self-signed, but that will only work for testing purposes. You're going to have to create two files: `server.cert` and `server.key`. Add your certificate and you private key to the corresponding files.
 
-**OR**
-
-Generate a self-signed SSL certificate (for testing purposes only)
-```sh
-openssl req -nodes -new -x509 -keyout server.key -out server.cert
-```
 Finally, install the dependencies and start the server
 ```sh
 npm install
