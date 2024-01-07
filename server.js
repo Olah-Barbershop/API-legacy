@@ -35,7 +35,7 @@ process.on('SIGINT', () => {
 });
 
 // Connect to database and start server
-mongoose.connect(process.env.DATABASE_URL, { useNewUrlParser: true, useUnifiedTopology: true }).then(() => {
+mongoose.connect(process.env.DATABASE_URL).then(() => {
     console.log('Connected to database');
     https.createServer(
       {
