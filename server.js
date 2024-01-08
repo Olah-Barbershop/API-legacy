@@ -1,4 +1,5 @@
 const express = require('express');
+const cors = require('cors');
 const locationsRoute = require('./routes/locations.route');
 const servicesRoute = require('./routes/services.route');
 const notificationsRoute = require('./routes/notifications.route');
@@ -10,9 +11,17 @@ const fs = require('fs');
 
 const app = express();
 
-app.use('/locations', locationsRoute);
-app.use('/services', servicesRoute);
-app.use('/notifications', notificationsRoute);
+const corsOptions = {
+  origin: "*",
+  methods: 'GET',
+  optionsSuccessStatus: 200,
+}
+
+app.use(cors(corsOptions));
+
+app.use('/locations', cors(corsOptions), locationsRoute);
+app.use('/services', cors(corsOptions), servicesRoute);
+app.use('/notifications', cors(corsOptions), notificationsRoute);
 
 app.use((req, res, next) => {
     next(createError(404, 'Resource not found')); // Create error and forward it to the error handler
