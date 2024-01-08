@@ -4,7 +4,6 @@ const Schema = mongoose.Schema;
 const LocationsSchema = new Schema({
     address: String,
     phone: String,
-    email: String,
     mondayToThursday: String,
     friday: String,
     saturdayToSunday: String
