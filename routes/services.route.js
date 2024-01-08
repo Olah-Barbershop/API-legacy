@@ -2,7 +2,6 @@ const express = require('express');
 const Services = require('../models/services.model');
 const router = express.Router();
 const createError = require('http-errors');
-const headers = require('./headers')
 
 router.get('/', async (req, res, next) => {
     try {
