@@ -1,23 +1,23 @@
 {
-    "name": "olahbarbershop-api",
-    "version": "1.0.0",
-    "description": "The REST API for the Oláh Barbershop app.",
-    "main": "server.js",
-    "scripts": {
-        "dev": "nodemon server.js"
-    },
-    "keywords": [],
-    "author": "P Mark",
-    "license": "ISC",
-    "dependencies": {
-        "cors": "^2.8.5",
-        "express": "^4.18.2",
-        "http-errors": "^2.0.0",
-        "mongoose": "^8.0.3",
-        "punycode": "^2.3.1"
-    },
-    "devDependencies": {
-        "dotenv": "^16.3.1",
-        "nodemon": "^3.0.2"
-    }
+  "name": "olahbarbershop-api",
+  "version": "1.0.1",
+  "description": "The REST API for the Oláh Barbershop app.",
+  "main": "server.js",
+  "scripts": {
+    "dev": "nodemon server.js"
+  },
+  "keywords": [],
+  "author": "P Mark",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "http-errors": "^2.0.0",
+    "mongoose": "^8.0.4",
+    "punycode": "^2.3.1"
+  },
+  "devDependencies": {
+    "dotenv": "^16.3.1",
+    "nodemon": "^3.0.2"
+  }
 }
