@@ -9,16 +9,31 @@ I'm not sure if I'll be able to renew the API server, but it's guaranteed to be 
 ## Endpoints
 - /services - Our services
   - https://olahbarbershop.codes/services
-  - ```json
+    ```json
     {
       "name": "The service name (String)",
       "description": "Description of the service (String)",
       "amount": "The price (Number)"
     }
     ```
+- /contacts - All the ways to contact us
+  - https://olahbarbershop.codes/contacts (not available yet)
+    ```json
+    {
+      "left": "Contact to be displayed on the left side (Contact)",
+      "right": "Contact to be displayed on the right side (Contact)"
+    }
+    ```
+  - Contact type:
+    ```json
+    {
+      "name": "The name of contact(e.g. email, facebook etc.) (String)",
+      "link": "Link for said contact (String)"
+    }
+    ```
 - /locations - Our locations
   - https://olahbarbershop.codes/locations
-  - ```json
+    ```json
     {
       "address": "The location's address (String)",
       "phoneNumber": "The location's telephone number (String)",
@@ -29,7 +44,7 @@ I'm not sure if I'll be able to renew the API server, but it's guaranteed to be 
     ```
 - /notifications - App notifications about news and merch
   - https://olahbarbershop.codes/notifications
-  - ```json
+    ```json
     {
       "_id": "The notification ID (ObjectID)",
       "type": "The notification type, either 'news' or 'merch' (String)",
