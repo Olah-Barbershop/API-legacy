@@ -5,7 +5,7 @@ const createError = require('http-errors');
 
 router.get('/', async (req, res, next) => {
     try {
-        const results = await Contacts.find({}, {_id: 0, "left._id": 0, "right._id": 0});
+        const results = await Contacts.find({}, {_id: 0, "left._id": 0, "right._id": 0}).sort({_id: 1});
         if (results == "") throw createError(404, 'No available contact.');
         res.send(results)
     } catch (err) {
