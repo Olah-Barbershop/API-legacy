@@ -20,15 +20,15 @@ I'm not sure if I'll be able to renew the API server, but it's guaranteed to be 
   - https://olahbarbershop.codes/contacts (not available yet)
     ```json
     {
-      "left": "Contact to be displayed on the left side (Contact)",
-      "right": "Contact to be displayed on the right side (Contact)"
+      "left": "Contact method to be displayed on the left side (Contact)",
+      "right": "(If name and link are empty, the line will only include the 'left' contact method) Contact to be displayed on the right side (Contact)"
     }
     ```
   - Contact type:
     ```json
     {
-      "name": "The name of contact(e.g. email, facebook etc.) (String)",
-      "link": "Link for said contact (String)"
+      "name": "The name of contact method(e.g. email, facebook etc.) (String)",
+      "link": "Link for said contact method (String)"
     }
     ```
 - /locations - Our locations
