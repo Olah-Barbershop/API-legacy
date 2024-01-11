@@ -12,21 +12,14 @@ First, clone the repository
 git clone https://github.com/Olah-Barbershop/API.git
 cd API
 ```
-Next, create a `.env` file and add your MongoDB database url like this
+Add your MongoDB url to a `.env` file
 ```env
 DATABASE_URL=[your database url]
 ```
-Now, you're going to need an SSL certificate. It can be self-signed, but that will only work for testing purposes. You're going to have to create two files: `server.cert` and `server.key`. Add your certificate and you private key to the corresponding files.
+Now, you're going to need an SSL certificate. You'll need two files: `server.cert` and `server.key`. Add your certificate and you private key to the corresponding files.
 
 Finally, install the dependencies and start the server
 ```sh
-npm install
+pnpm install
 node server.js
-```
-**P.S.** If you get a punycode deprecation warning, just change the following line in `node_modules/tr46/index.js`
-```js
-// from this
-const punycode = require("punycode");
-// to this
-const punycode = require("punycode/");
 ```
