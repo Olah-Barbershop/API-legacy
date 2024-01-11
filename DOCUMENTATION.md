@@ -17,7 +17,7 @@ I'm not sure if I'll be able to renew the API server, but it's guaranteed to be 
     }
     ```
 - /contacts - All the ways to contact us
-  - https://olahbarbershop.codes/contacts (not available yet)
+  - https://olahbarbershop.codes/contacts
     ```json
     {
       "left": "Contact method to be displayed on the left side (Contact)",
