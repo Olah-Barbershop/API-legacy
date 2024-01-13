@@ -16,7 +16,7 @@ Add your MongoDB url to a `.env` file
 ```env
 DATABASE_URL=[your database url]
 ```
-Now, you're going to need an SSL certificate. You'll need two files: `server.cert` and `server.key`. Add your certificate and you private key to the corresponding files.
+Now, you're going to need an SSL certificate. Add your certificate to `server.cert` and you private key to `server.key`.
 
 Finally, install the dependencies and start the server
 ```sh
