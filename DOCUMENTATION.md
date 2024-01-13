@@ -37,9 +37,9 @@ I'm not sure if I'll be able to renew the API server, but it's guaranteed to be 
     {
       "address": "The location's address (String)",
       "phoneNumber": "The location's telephone number (String)",
-      "mondayToThursday": "Our business hours from Monday to Thursday in military time (String)",
-      "friday": "Our business hours on Friday in military time (String)",
-      "saturdayToSunday": "Our business hours from Saturday to Sunday in military time (String)"
+      "mondayToThursday": "The location's business hours from Monday to Thursday in 24-hour time (String)",
+      "friday": "The location's business hours on Friday in 24-hour time (String)",
+      "saturdayToSunday": "The location's business hours from Saturday to Sunday in 24-hour time (String)"
     }
     ```
 - /notifications - App notifications about news and merch
