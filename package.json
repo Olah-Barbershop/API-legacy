@@ -1,13 +1,13 @@
 {
   "name": "olahbarbershop-api",
   "version": "1.1.0",
-  "description": "The REST API for the Oláh Barbershop app.",
+  "description": "The REST API for the Oláh Barbershop app and website.",
   "main": "server.js",
   "scripts": {
     "dev": "nodemon server.js"
   },
   "keywords": [],
-  "author": "P Mark",
+  "author": "pml68",
   "license": "ISC",
   "dependencies": {
     "cors": "^2.8.5",
