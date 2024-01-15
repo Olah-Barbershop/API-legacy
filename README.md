@@ -7,19 +7,19 @@
 Check out the API documentation [here](DOCUMENTATION.md)
 
 ## Instructions
-First, clone the repository
+Clone the repository and install the dependencies
 ```sh
 git clone https://github.com/Olah-Barbershop/API.git
 cd API
+pnpm install
 ```
 Add your MongoDB url to a `.env` file
 ```env
 DATABASE_URL=[your database url]
 ```
-Now, you're going to need an SSL certificate. Add your certificate to `server.cert` and you private key to `server.key`.
+You'll need an SSL certificate. Add your certificate to `server.cert` and you private key to `server.key`.
 
-Finally, install the dependencies and start the server
+Start the server
 ```sh
-pnpm install
 node server.js
 ```
