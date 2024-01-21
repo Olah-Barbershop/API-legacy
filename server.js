@@ -1,9 +1,9 @@
 const express = require('express');
 const cors = require('cors');
-const locationsRoute = require('./routes/locations.route');
-const servicesRoute = require('./routes/services.route');
-const notificationsRoute = require('./routes/notifications.route');
-const contactsRoute = require('./routes/contacts.route');
+const getLocations = require('./controllers/locations.route');
+const getServices = require('./controllers/services.route');
+const getNotifications = require('./controllers/notifications.route');
+const getContacts = require('./controllers/contacts.route');
 const mongoose = require('mongoose');
 const https = require('https');
 const createError = require('http-errors');
@@ -20,10 +20,10 @@ const corsOptions = {
 
 app.use(cors(corsOptions));
 
-app.use('/locations', cors(corsOptions), locationsRoute);
-app.use('/services', cors(corsOptions), servicesRoute);
-app.use('/notifications', cors(corsOptions), notificationsRoute);
-app.use('/contacts', cors(corsOptions), contactsRoute)
+app.use('/locations', cors(corsOptions), express.Router().get('/', getLocations));
+app.use('/contacts', cors(corsOptions), express.Router().get('/', getContacts));
+app.use('/notifications', cors(corsOptions), express.Router().get('/', getNotifications));
+app.use('/services', cors(corsOptions), express.Router().get('/', getServices));
 
 app.use((req, res, next) => {
     next(createError(404, 'Resource not found')); // Create error and forward it to the error handler

@@ -3,7 +3,7 @@ const router = express.Router();
 const Locations = require('../models/locations.model')
 const createError = require('http-errors');
 
-router.get('/', async (req, res, next) => {
+const getLocations = async (req, res, next) => {
     try {
         const results = await Locations.find({}, {_id: 0});
         if (results == "") throw createError(404, 'No available locations.');
@@ -11,6 +11,6 @@ router.get('/', async (req, res, next) => {
     } catch (err) {
         console.log(err.message);
     };
-});
+}
 
-module.exports = router;
+module.exports = getLocations;
