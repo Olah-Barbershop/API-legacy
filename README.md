@@ -13,9 +13,10 @@ git clone https://github.com/Olah-Barbershop/API.git
 cd API
 pnpm install
 ```
-Add your MongoDB url to a `.env` file
+Add your MongoDB url and (optionally) API port to a `.env` file
 ```env
 DATABASE_URL=[your database url]
+PORT=[port for the API]
 ```
 You'll need an SSL certificate. Add your certificate to `server.cert` and you private key to `server.key`.
 
