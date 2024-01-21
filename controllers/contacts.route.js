@@ -1,5 +1,3 @@
-const express = require('express');
-const router = express.Router();
 const Contacts = require('../models/contacts.model')
 const createError = require('http-errors');
 

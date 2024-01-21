@@ -1,6 +1,4 @@
-const express = require('express');
 const Services = require('../models/services.model');
-const router = express.Router();
 const createError = require('http-errors');
 
 const getServices = async (req, res, next) => {
