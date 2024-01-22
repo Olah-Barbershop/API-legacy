@@ -6,7 +6,7 @@ const httpMocks = require('node-mocks-http')
 jest.mock('../models/services.model')
 
 describe('Services API endpoint', () => {
-  it('throws 404 error', async () => {
+  it('throws 404 error and returns 404 status code', async () => {
     Services.find.mockReturnValueOnce(null)
 
     const req = httpMocks.createRequest()
@@ -16,6 +16,7 @@ describe('Services API endpoint', () => {
     await getServices(req, res, next)
 
     expect(next).toHaveBeenCalledWith(createError(404, 'No available services.'))
+    expect(res.statusCode).toBe(404)
     expect(res._getData()).toEqual("")
   })
 

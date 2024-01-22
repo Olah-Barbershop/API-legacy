@@ -6,7 +6,7 @@ const httpMocks = require('node-mocks-http')
 jest.mock('../models/notifications.model')
 
 describe('Notifications API endpoint', () => {
-  it('throws 404 error', async () => {
+  it('throws 404 error and returns 404 status code', async () => {
     Notifications.find.mockResolvedValue(null)
 
     const req = httpMocks.createRequest()
@@ -16,6 +16,7 @@ describe('Notifications API endpoint', () => {
     await getNotifications(req, res, next)
 
     expect(next).toHaveBeenCalledWith(createError(404, 'No available notifications.'))
+    expect(res.statusCode).toBe(404)
     expect(res._getData()).toEqual("")
   })
 

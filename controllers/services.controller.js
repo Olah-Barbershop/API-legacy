@@ -5,9 +5,10 @@ const getServices = async (req, res, next) => {
     try {
         const results = await Services.find({}, {_id: 0});
         if (!results) throw createError(404, 'No available services.');
-        res.send(results);
+        res.status(200).send(results);
     } catch (err) {
         console.log(err.message);
+        res.status(404);
         next(err);
     }
 }
