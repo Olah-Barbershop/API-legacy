@@ -8,6 +8,7 @@ const getLocations = async (req, res, next) => {
         res.send(results)
     } catch (err) {
         console.log(err.message);
+        next(err);
     };
 }
 
