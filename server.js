@@ -12,6 +12,8 @@ const fs = require('fs');
 
 const app = express();
 
+const port = process.env.PORT ? process.env.PORT : 443
+
 const corsOptions = {
   origin: "*",
   methods: 'GET',
@@ -55,8 +57,8 @@ mongoose.connect(process.env.DATABASE_URL).then(() => {
       },
       app
     )
-    .listen(process.env.PORT ? process.env.PORT : 443, () => {
-        console.log(`Server is running on port ${process.env.PORT}`);
+    .listen(port, () => {
+        console.log(`Server is running on port ${port}`);
     });
 }).catch((err) => {
     console.log(err.message);
