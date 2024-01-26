@@ -3,7 +3,7 @@ const cors = require('cors');
 const getLocations = require('./controllers/locations.controller');
 const getServices = require('./controllers/services.controller');
 const getNotifications = require('./controllers/notifications.controller');
-const getContacts = require('./controllers/contacts.controller');
+const getContactInfo = require('./controllers/contactinfo.controller');
 const mongoose = require('mongoose');
 const https = require('https');
 const createError = require('http-errors');
@@ -23,7 +23,7 @@ const corsOptions = {
 app.use(cors(corsOptions));
 
 app.use('/locations', cors(corsOptions), express.Router().get('/', getLocations));
-app.use('/contacts', cors(corsOptions), express.Router().get('/', getContacts));
+app.use('/contactinfo', cors(corsOptions), express.Router().get('/', getContactInfo));
 app.use('/notifications', cors(corsOptions), express.Router().get('/', getNotifications));
 app.use('/services', cors(corsOptions), express.Router().get('/', getServices));
 
