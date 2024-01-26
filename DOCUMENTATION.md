@@ -16,8 +16,8 @@ I'm not sure if I'll be able to renew the API server, but it's guaranteed to be 
       "amount": "The price (Number)"
     }
     ```
-- /contacts - All the ways to contact us
-  - https://olahbarbershop.codes/contacts
+- /contactinfo - All the ways to contact us
+  - https://olahbarbershop.codes/contactinfo
     ```json
     {
       "left": "Contact method to be displayed on the left side (Contact)",
