@@ -6,10 +6,10 @@ const ContactSchema = new Schema({
   link: String
 });
 
-const ContactsSchema = new Schema({
+const ContactInfoSchema = new Schema({
   left: ContactSchema,
   right: ContactSchema
 });
 
-const Contacts = mongoose.model('contacts', ContactsSchema);
-module.exports = Contacts;
+const ContactInfo = mongoose.model('contactinfo', ContactInfoSchema, 'contactinfo');
+module.exports = ContactInfo;

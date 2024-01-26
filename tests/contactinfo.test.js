@@ -1,19 +1,19 @@
 const createError = require('http-errors');
-const getContacts = require('../controllers/contacts.controller')
-const Contacts = require('../models/contacts.model')
+const getContactInfo = require('../controllers/contactinfo.controller')
+const ContactInfo = require('../models/contactinfo.model')
 const httpMocks = require('node-mocks-http')
 
-jest.mock('../models/contacts.model')
+jest.mock('../models/contactinfo.model')
 
 describe('Contacts API endpoint', () => {
   it('throws 404 error and returns 404 status code', async () => {
-    Contacts.find.mockResolvedValue(null)
+    ContactInfo.find.mockResolvedValue(null)
 
     const req = httpMocks.createRequest()
     const res = httpMocks.createResponse()
     const next = jest.fn()
 
-    await getContacts(req, res, next)
+    await getContactInfo(req, res, next)
 
     expect(next).toHaveBeenCalledWith(createError(404, 'No available contact.'))
     expect(res.statusCode).toBe(404)
@@ -32,13 +32,13 @@ describe('Contacts API endpoint', () => {
       }
     }
 
-    Contacts.find.mockResolvedValue(resp)
+    ContactInfo.find.mockResolvedValue(resp)
 
     const req = httpMocks.createRequest()
     const res = httpMocks.createResponse()
     const next = jest.fn()
 
-    await getContacts(req, res, next)
+    await getContactInfo(req, res, next)
 
     expect(res.statusCode).toBe(200)
     expect(res._getData()).toEqual(resp)
