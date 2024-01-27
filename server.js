@@ -1,14 +1,14 @@
-const express = require('express');
-const cors = require('cors');
 const getLocations = require('./controllers/locations.controller');
 const getServices = require('./controllers/services.controller');
 const getNotifications = require('./controllers/notifications.controller');
 const getContactInfo = require('./controllers/contactinfo.controller');
+const cors = require('cors');
+const express = require('express');
 const mongoose = require('mongoose');
 const https = require('https');
 const createError = require('http-errors');
-require('dotenv').config();
 const fs = require('fs');
+require('dotenv').config();
 
 const app = express();
 
