@@ -22,10 +22,10 @@ const corsOptions = {
 
 app.use(cors(corsOptions));
 
-app.use('/locations', cors(corsOptions), express.Router().get('/', getLocations));
-app.use('/contactinfo', cors(corsOptions), express.Router().get('/', getContactInfo));
-app.use('/notifications', cors(corsOptions), express.Router().get('/', getNotifications));
-app.use('/services', cors(corsOptions), express.Router().get('/', getServices));
+app.use('/locations', express.Router().get('/', getLocations));
+app.use('/contactinfo', express.Router().get('/', getContactInfo));
+app.use('/notifications', express.Router().get('/', getNotifications));
+app.use('/services', express.Router().get('/', getServices));
 
 app.use((req, res, next) => {
     next(createError(404, 'Resource not found')); // Create error and forward it to the error handler
