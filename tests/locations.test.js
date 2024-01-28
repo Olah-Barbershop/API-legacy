@@ -20,7 +20,7 @@ describe('Locations API endpoint', () => {
     expect(res._getData()).toEqual("")
   })
 
-  it('returns an object', async () => {
+  it('returns the correct document with 200 status code', async () => {
     const resp = {
       address: "Budapest, Lovasi tér 2, 1137",
       phoneNumber: "+36/1-555-****",

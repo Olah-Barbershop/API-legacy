@@ -20,7 +20,7 @@ describe('Notifications API endpoint', () => {
     expect(res._getData()).toEqual("")
   })
 
-  it('returns an object', async () => {
+  it('returns the correct document with 200 status code', async () => {
     const resp = {
       left: {
         name: "something",

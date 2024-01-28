@@ -20,7 +20,7 @@ describe('Services API endpoint', () => {
     expect(res._getData()).toEqual("")
   })
 
-  it('returns an object', async () => {
+  it('returns the correct document with 200 status code', async () => {
     const resp = {
       name: "Normal cut",
       description: "Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.",
