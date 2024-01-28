@@ -4,7 +4,7 @@ const createError = require('http-errors');
 const getContactInfo = async (req, res, next) => {
     try {
         const results = await ContactInfo.find({}, {_id: 0, "left._id": 0, "right._id": 0}, {sort: {_id: 1}});
-        if (!results) throw createError(404, 'No available contact.');
+        if (!results) throw createError(404, 'No available contact method.');
         res.status(200).send(results);
     } catch (err) {
         console.log(err.message);
