@@ -5,7 +5,7 @@ const httpMocks = require('node-mocks-http')
 
 jest.mock('../models/contactinfo.model')
 
-describe('Contacts API endpoint', () => {
+describe('Contact Info API endpoint', () => {
   it('throws 404 error and returns 404 status code', async () => {
     ContactInfo.find.mockResolvedValue(null)
 
