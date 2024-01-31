@@ -7,7 +7,7 @@ jest.mock('../models/notifications.model')
 
 describe('Notifications API endpoint', () => {
   it('throws 404 error and returns 404 status code', async () => {
-    Notifications.find.mockResolvedValue(null)
+    Notifications.find.mockResolvedValue("")
 
     const req = httpMocks.createRequest()
     const res = httpMocks.createResponse()

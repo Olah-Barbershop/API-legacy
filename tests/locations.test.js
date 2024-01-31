@@ -7,7 +7,7 @@ jest.mock('../models/locations.model')
 
 describe('Locations API endpoint', () => {
   it('throws 404 error and returns 404 status code', async () => {
-    Locations.find.mockResolvedValue(null)
+    Locations.find.mockResolvedValue("")
 
     const req = httpMocks.createRequest()
     const res = httpMocks.createResponse()
