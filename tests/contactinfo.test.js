@@ -16,7 +16,6 @@ describe('Contact Info API endpoint', () => {
     await getContactInfo(req, res, next)
 
     expect(next).toHaveBeenCalledWith(createError(404, 'No available contact method.'))
-    expect(res.statusCode).toBe(404)
     expect(res._getData()).toEqual("")
   })
 

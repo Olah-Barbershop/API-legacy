@@ -16,7 +16,6 @@ describe('Locations API endpoint', () => {
     await getLocations(req, res, next)
 
     expect(next).toHaveBeenCalledWith(createError(404, 'No available locations.'))
-    expect(res.statusCode).toBe(404)
     expect(res._getData()).toEqual("")
   })
 

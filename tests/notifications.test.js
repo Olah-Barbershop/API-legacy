@@ -16,7 +16,6 @@ describe('Notifications API endpoint', () => {
     await getNotifications(req, res, next)
 
     expect(next).toHaveBeenCalledWith(createError(404, 'No available notifications.'))
-    expect(res.statusCode).toBe(404)
     expect(res._getData()).toEqual("")
   })
 

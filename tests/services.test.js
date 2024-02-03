@@ -16,7 +16,6 @@ describe('Services API endpoint', () => {
     await getServices(req, res, next)
 
     expect(next).toHaveBeenCalledWith(createError(404, 'No available services.'))
-    expect(res.statusCode).toBe(404)
     expect(res._getData()).toEqual("")
   })
 

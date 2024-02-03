@@ -8,7 +8,6 @@ const getNotifications = async (req, res, next) => {
         res.status(200).send(results);
     } catch (err) {
         console.log(err.message);
-        res.status(404);
         next(err);
     }
 }
