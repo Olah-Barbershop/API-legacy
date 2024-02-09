@@ -36,6 +36,7 @@ app.use((err, req, res, next) => {
         error: {
             status: err.status || 500,
             message: err.message,
+            image: "https://http.cat/" + err.status + ".jpg"
         }
     }); // Send error response
 });
