@@ -1,6 +1,6 @@
 {
   "name": "olahbarbershop-api",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "The REST API for the Oláh Barbershop app and website.",
   "main": "server.js",
   "scripts": {
