@@ -12,7 +12,7 @@ require('dotenv').config();
 
 const app = express();
 
-const port = process.env.PORT ? process.env.PORT : 443
+const port = process.env.PORT || 443
 
 const corsOptions = {
   origin: "*",
