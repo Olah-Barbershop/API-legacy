@@ -4,7 +4,7 @@
 
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0) &nbsp;
 [![GitHub Release](https://img.shields.io/github/v/release/Olah-Barbershop/API)](https://github.com/Olah-Barbershop/API-legacy/releases/latest) &nbsp;
-[![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/Olah-Barbershop/API/test.yml?label=test)](https://github.com/Olah-Barbershop/API-legacy)
+[![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/Olah-Barbershop/API-legacy/test.yml?label=test)](https://github.com/Olah-Barbershop/API-legacy)
 
 ## Documentation
 Check out the API documentation [here](DOCUMENTATION.md)
